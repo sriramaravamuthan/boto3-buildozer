@@ -21,7 +21,11 @@ buildozer init
 buildozer android update 
 
 # To deploy to connected device
+```
 buildozer android deploy run 
+```
 
 # To see logs
+```
 buildozer android deploy run logcat
+```
