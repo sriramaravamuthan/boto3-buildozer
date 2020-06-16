@@ -21,16 +21,16 @@ class HelloWorldScreen(GridLayout):
     buckets = "1"
     def my_callback(self):
         client = boto3.client('s3',
-            aws_access_key_id='*****',
-            aws_secret_access_key='*******',
-            aws_session_token='******',
+            aws_access_key_id='***',
+            aws_secret_access_key='***',
+            aws_session_token='****',
         )
         response = client.list_buckets()
         #print(response)
         self.buckets = response
-        #for bucket in response['Buckets']:
-            #print(f'  {bucket["Name"]}')
-        print(buckets.length)
+        for bucket in response['Buckets']:
+            print(f'  {bucket["Name"]}')
+        #print(self.buckets.length)
         self.counter += 1
 
 class HelloWorldApp(App):
